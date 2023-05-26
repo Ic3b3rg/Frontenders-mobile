@@ -7,7 +7,7 @@ import { apiService } from "../../../services/apiService";
 import { RepositoryList } from "../../../types/apiService";
 import { RepositoryCardList } from "../../../types/tabs";
 import { View } from "../../../components/Themed";
-import ScreenContainer from "../../../components/common/screenContainer";
+import ScreenContainer from "../../../components/common/ScreenContainer";
 import SkeletonCustomGroup from "../../../components/common/Skeleton";
 import { useGetAllReposQuery } from "../../../services/repos.query";
 
@@ -45,7 +45,7 @@ export default function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // padding: 8,
+    paddingBottom: 80,
     alignItems: "center",
     justifyContent: "center",
   },

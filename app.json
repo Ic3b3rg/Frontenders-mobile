@@ -22,11 +22,18 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#def249"
-      }
+      },
+      "package": "com.ic3b3rg94.frontenders"
     },
     "web": {
       "bundler": "metro",
       "favicon": "./assets/images/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "41f92566-0fa6-4a29-bb05-a257f74ff8ef"
+      }
+    },
+    "owner": "ic3b3rg94"
   }
 }

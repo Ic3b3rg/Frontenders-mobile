@@ -1,6 +1,7 @@
 import { readMeApi } from '../services/readME.query';
 import { reposApi } from '../services/repos.query';
 import profileReducer from './profile/profileInfoSlice';
+import favouritesReducer from './favourites/favouritesSlice';
 import counterReducer from './repos/repositoriesSlice';
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 
@@ -8,6 +9,7 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit'
 const rootReducer = combineReducers({
   counterReducer,
   profileReducer,
+  favouritesReducer,
   [reposApi.reducerPath]: reposApi.reducer,
   [readMeApi.reducerPath]: readMeApi.reducer
 })

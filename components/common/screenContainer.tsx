@@ -8,7 +8,8 @@ export default function ScreenContainer({ children }: PropsWithChildren<any>) {
         paddingTop: 40,
         paddingLeft: 16,
         paddingRight: 16,
-        paddingBottom: 80,
+        paddingBottom: 16,
+        height: '100%'
       }}
     >
       {children}

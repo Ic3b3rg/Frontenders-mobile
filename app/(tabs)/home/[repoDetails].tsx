@@ -4,11 +4,11 @@ import { Icon, Text } from "@rneui/themed";
 import { Stack, useSearchParams } from "expo-router";
 import { View } from "../../../components/Themed";
 import DetailsCard from "../../../components/detailsCard";
-import FlexContainer from "../../../components/common/flexContainer";
+import FlexContainer from "../../../components/common/FlexContainer";
 import { ExternalLink } from "../../../components/ExternalLink";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useGetProgrammingLanguagesFromRepoQuery, useGetReposByNameQuery } from "../../../services/repos.query";
-import ScreenContainer from "../../../components/common/screenContainer";
+import ScreenContainer from "../../../components/common/ScreenContainer";
 import { useGetReadMeByNameQuery } from "../../../services/readME.query";
 
 export default function RepoDetails() {

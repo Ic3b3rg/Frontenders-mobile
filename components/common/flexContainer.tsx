@@ -13,7 +13,7 @@ export interface FlexContainerInterface {
     | undefined;
   alignItems?: FlexAlignType | undefined;
   gap?: number;
-  style?: StyleSheet;
+  style?: Record<string, string | number>;
 }
 export default function FlexContainer({
   flexDirection = "row",
@@ -26,7 +26,6 @@ export default function FlexContainer({
   return (
     <View
       style={{
-        flex: 1,
         display: "flex",
         alignItems,
         gap,
