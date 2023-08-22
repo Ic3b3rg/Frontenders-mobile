@@ -3,13 +3,14 @@ import { Button, Text } from "@rneui/themed";
 
 import { Avatar, Icon, Input } from "@rneui/themed";
 import InputCustom from "../../components/common/InputCustom";
-import ScreenContainer from "../../components/common/ScreenContainer";
-import FlexContainer from "../../components/common/FlexContainer";
+
 import useAsyncStorage from "../../hooks/useAsyncStorage";
 import { ListItem } from "@rneui/themed";
 import { useDispatch, useSelector } from "react-redux";
 import { selectAllFavourite } from "../../store/favourites/favouritesSelector";
 import { handleFavourite } from "../../store/favourites/favouritesSlice";
+import ScreenContainer from "../../components/common/screenContainer";
+import FlexContainer from "../../components/common/flexContainer";
 
 export default function TabTwoScreen() {
   const {
@@ -21,7 +22,7 @@ export default function TabTwoScreen() {
     initialValue: "",
   });
   const allFavourites = useSelector(selectAllFavourite);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   return (
     <>
       <ScreenContainer>
@@ -63,7 +64,7 @@ export default function TabTwoScreen() {
             rightContent={(reset) => (
               <Button
                 title="Delete"
-                onPress={() => dispatch(handleFavourite({id, name}))}
+                onPress={() => dispatch(handleFavourite({ id, name }))}
                 icon={{ name: "delete", color: "white" }}
                 buttonStyle={{ minHeight: "100%", backgroundColor: "red" }}
               />

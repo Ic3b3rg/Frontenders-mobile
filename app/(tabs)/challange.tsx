@@ -1,17 +1,14 @@
 import { StyleSheet } from "react-native";
 import { Text } from "@rneui/themed";
-
-import ScreenContainer from "../../components/common/ScreenContainer";
+import ScreenContainer from "../../components/common/screenContainer";
 
 export default function ChallangeScreen() {
-
   return (
     <>
       <ScreenContainer>
         <Text h3 style={{ color: "#def249", textAlign: "center" }}>
           challange
         </Text>
-
       </ScreenContainer>
     </>
   );

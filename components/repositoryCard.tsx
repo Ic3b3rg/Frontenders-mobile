@@ -10,7 +10,6 @@ import {
 } from "@rneui/themed";
 import { RepositoryCardInterface } from "../types/tabs";
 
-import FlexContainer from "./common/FlexContainer";
 import { deleteDashFromString, formatDate, truncate } from "../utils/utils";
 import { useLinkTo } from "@react-navigation/native";
 
@@ -26,6 +25,7 @@ import {
 } from "../services/repos.query";
 import { useGetReadMeByNameQuery } from "../services/readME.query";
 import { LinearGradient } from "expo-linear-gradient";
+import FlexContainer from "./common/flexContainer";
 
 export function RepositoryCard({
   id,
@@ -41,8 +41,8 @@ export function RepositoryCard({
   const { data: languages } = useGetProgrammingLanguagesFromRepoQuery(name);
   const linkTo = useLinkTo();
   const navigateTo = (href: string) => {
-    // linkTo(href)
-    console.log(readme?.toString());
+    // linkTo(href);
+    // console.log(readme?.toString());
   };
   const extractTextFromMarkdown = (markdown: string): string => {
     if (!markdown) return "";

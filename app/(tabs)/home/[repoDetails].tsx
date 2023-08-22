@@ -3,17 +3,17 @@ import { ScrollView, StyleSheet } from "react-native";
 import { Divider, Icon, useTheme } from "@rneui/themed";
 import { Stack, useSearchParams } from "expo-router";
 import DetailsCard from "../../../components/detailsCard";
-import FlexContainer from "../../../components/common/FlexContainer";
 import { ExternalLink } from "../../../components/ExternalLink";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import {
   useGetProgrammingLanguagesFromRepoQuery,
   useGetReposByNameQuery,
 } from "../../../services/repos.query";
-import ScreenContainer from "../../../components/common/ScreenContainer";
 import { useGetReadMeByNameQuery } from "../../../services/readME.query";
 import FeText from "../../../components/common/FeText";
 import { deleteDashFromString } from "../../../utils/utils";
+import FlexContainer from "../../../components/common/flexContainer";
+import ScreenContainer from "../../../components/common/screenContainer";
 
 export default function RepoDetails() {
   const { repoDetails } = useSearchParams<{ repoDetails: string }>();
@@ -26,6 +26,7 @@ export default function RepoDetails() {
   if (!repo) {
     return <></>;
   }
+  console.log("pippo");
   return (
     <ScreenContainer>
       <Stack.Screen options={{ headerShown: false }} />
@@ -34,7 +35,11 @@ export default function RepoDetails() {
       <ScrollView>
         <FlexContainer gap={16} flexDirection="column">
           <DetailsCard outline>
-            <FlexContainer flexDirection="row" justifyContent="space-around" style={{width:'100%'}}>
+            <FlexContainer
+              flexDirection="row"
+              justifyContent="space-around"
+              style={{ width: "100%" }}
+            >
               <FlexContainer flexDirection="column" alignItems="center">
                 <FeText>{"star".toUpperCase()}</FeText>
                 <Icon name={"star"} />

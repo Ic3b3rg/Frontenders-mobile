@@ -2,18 +2,19 @@ import { ScrollView, View } from "react-native";
 
 import { Text, makeStyles, useTheme } from "@rneui/themed";
 import { RepositoryCard } from "../../../components/repositoryCard";
-import ScreenContainer from "../../../components/common/ScreenContainer";
+
 import SkeletonCustomGroup from "../../../components/common/Skeleton";
 import { useGetAllReposQuery } from "../../../services/repos.query";
+import ScreenContainer from "../../../components/common/screenContainer";
 
 export default function Home() {
   const { data: repositories, error, isLoading } = useGetAllReposQuery();
-  const styles = useStyles()
-  const {theme} = useTheme()
+  const styles = useStyles();
+  const { theme } = useTheme();
   return (
     <>
       <ScreenContainer>
-        <Text h3 style={{ color: theme.colors.text, textAlign:'center' }}>
+        <Text h3 style={{ color: theme.colors.text, textAlign: "center" }}>
           👩‍💻 Fronteders Mobile 👨‍💻
         </Text>
         {!repositories || isLoading ? (
@@ -38,13 +39,13 @@ export default function Home() {
   );
 }
 
-const useStyles = makeStyles((theme, props)=>({
+const useStyles = makeStyles((theme, props) => ({
   container: {
     flex: 1,
     paddingBottom: 80,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: theme.colors.background
+    backgroundColor: theme.colors.background,
   },
   title: {
     fontSize: 20,
