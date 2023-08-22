@@ -1,8 +1,9 @@
-import { Icon } from '@rneui/themed';
+import { Icon, useTheme } from '@rneui/themed';
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Animated, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Animated } from 'react-native';
 
 const HeartIcon = ({ size= 24, filled }: { size?: number, filled: boolean }) => {
+  const {theme} = useTheme();
   const [scale, setScale] = useState(new Animated.Value(1));
 
   useEffect(() => {
@@ -39,7 +40,7 @@ const HeartIcon = ({ size= 24, filled }: { size?: number, filled: boolean }) => 
         <Icon
           name={filled ? 'heart' : 'heart-outline'}
           type="material-community"
-          color={filled ? '#f00' : '#000'}
+          color={filled ? '#f00' : theme.colors.primary}
           size={size}
         />
       </Animated.View>

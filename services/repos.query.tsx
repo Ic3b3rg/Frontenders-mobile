@@ -28,8 +28,11 @@ export const reposApi = basePathApi.injectEndpoints({
         const keys = Object.keys(baseQueryReturnValue);
         const values = Object.values(baseQueryReturnValue);
         const sum = values.reduce((prev, curr)=>prev + curr, 0);
-        return keys.map((language,index)=>{
+        return keys.map((language:string,index)=>{
           return {language, avg: ((values[index]*100)/ sum).toFixed(2)} 
+        }).sort((a, b) => {
+          // Ordina in base alla proprietà "language"
+          return a.language.localeCompare(b.language);
         }) || []
       },
     }),

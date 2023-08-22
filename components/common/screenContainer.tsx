@@ -1,7 +1,10 @@
+import { useTheme} from "@rneui/themed";
 import React from "react";
-import { View } from "../Themed";
+import { View } from "react-native";
 
 export default function ScreenContainer({ children }: PropsWithChildren<any>) {
+  const {theme} = useTheme();
+
   return (
     <View
       style={{
@@ -9,7 +12,8 @@ export default function ScreenContainer({ children }: PropsWithChildren<any>) {
         paddingLeft: 16,
         paddingRight: 16,
         paddingBottom: 16,
-        height: '100%'
+        height: '100%',
+        backgroundColor: theme.colors.background
       }}
     >
       {children}

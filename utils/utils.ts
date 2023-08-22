@@ -13,3 +13,11 @@ export function deleteDashFromString(str: string) {
         return firstLetterCap + remainingLetters
     }).join(' ')
 }
+
+export function truncate(str:string, maxLength:number):string {
+    if (str.length > maxLength) {
+      return str.substring(0, maxLength) + '...';
+    } else {
+      return str;
+    }
+  }

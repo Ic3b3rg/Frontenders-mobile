@@ -15,7 +15,7 @@ export default function SkeletonCustomGroup({repeat=1}:SkeletonCustomGroupInterf
           <Skeleton
             key={id + i}
             animation="pulse"
-            height={110}
+            height={200}
             style={{borderRadius:16}}
             skeletonStyle={{ borderRadius: 16, height: "100%", }}
           />
