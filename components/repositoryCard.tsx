@@ -41,7 +41,7 @@ export function RepositoryCard({
   const { data: languages } = useGetProgrammingLanguagesFromRepoQuery(name);
   const linkTo = useLinkTo();
   const navigateTo = (href: string) => {
-    // linkTo(href);
+    linkTo(href);
     // console.log(readme?.toString());
   };
   const extractTextFromMarkdown = (markdown: string): string => {

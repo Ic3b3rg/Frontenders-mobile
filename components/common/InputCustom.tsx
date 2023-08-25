@@ -1,4 +1,4 @@
-import { Icon, Input } from "@rneui/themed";
+import { Icon, Input, makeStyles, useTheme } from "@rneui/themed";
 import React from "react";
 import { StyleSheet, View } from "react-native";
 
@@ -7,9 +7,9 @@ interface InputCustomInterface {
   setValue: (value: string) => void;
   removeValue?: () => void;
 }
-export default function InputCustom(
-  props: InputCustomInterface
-) {
+export default function InputCustom(props: InputCustomInterface) {
+  const { theme } = useTheme();
+  const styles = useStyles();
 
   return (
     <View style={styles.inputContainer}>
@@ -18,10 +18,18 @@ export default function InputCustom(
         value={props.value?.toString()}
         onChangeText={props.setValue}
         leftIcon={
-          <Icon name="pencil" type="material-community" color="#def249" />
+          <Icon
+            name="pencil"
+            type="material-community"
+            color={theme.colors.text}
+          />
         }
         rightIcon={
-          <Icon name="check-circle" type="material-community" color="#def249" />
+          <Icon
+            name="check-circle"
+            type="material-community"
+            color={theme.colors.text}
+          />
         }
         inputStyle={styles.input}
         inputContainerStyle={styles.inputContainerStyle}
@@ -31,7 +39,7 @@ export default function InputCustom(
   );
 }
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles((theme, props) => ({
   inputContainer: {
     width: "100%",
     justifyContent: "center",
@@ -41,7 +49,7 @@ const styles = StyleSheet.create({
   inputContainerStyle: {
     borderWidth: 1,
     borderRadius: 25,
-    borderColor: "#def249",
+    borderColor: theme.colors.text,
     paddingHorizontal: 20,
     backgroundColor: "#fff",
   },
@@ -50,4 +58,4 @@ const styles = StyleSheet.create({
     color: "#000",
     fontWeight: "500",
   },
-});
+}));

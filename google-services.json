@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "803559494814",
+    "project_id": "frontendes-mobile",
+    "storage_bucket": "frontendes-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803559494814:android:60f237e9f692ce4e54d78f",
+        "android_client_info": {
+          "package_name": "com.ic3b3rg94.frontenders"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803559494814-vubc1p7kbcqoms258chfo6bt02gd9b1t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfEKemDId8hhoZopn0RH43qsFCyylcGkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803559494814-vubc1p7kbcqoms258chfo6bt02gd9b1t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

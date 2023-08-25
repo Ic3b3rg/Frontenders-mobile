@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Button, Text } from "@rneui/themed";
+import { Button, Text, useTheme } from "@rneui/themed";
 
 import { Avatar, Icon, Input } from "@rneui/themed";
 import InputCustom from "../../components/common/InputCustom";
@@ -21,12 +21,15 @@ export default function TabTwoScreen() {
     key: "username",
     initialValue: "",
   });
+
   const allFavourites = useSelector(selectAllFavourite);
   const dispatch = useDispatch();
+  const { theme } = useTheme();
+
   return (
     <>
       <ScreenContainer>
-        <Text h3 style={{ color: "#def249", textAlign: "center" }}>
+        <Text h3 style={{ color: theme.colors.text, textAlign: "center" }}>
           User Profile
         </Text>
         <FlexContainer
@@ -46,7 +49,11 @@ export default function TabTwoScreen() {
         </FlexContainer>
         <Text
           h3
-          style={{ color: "#def249", textAlign: "center", marginBottom: 16 }}
+          style={{
+            color: theme.colors.text,
+            textAlign: "center",
+            marginBottom: 16,
+          }}
         >
           Favourites
         </Text>
