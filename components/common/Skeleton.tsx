@@ -1,6 +1,6 @@
 import { Skeleton } from "@rneui/base";
 import React, { useId } from "react";
-import FlexContainer from "./flexContainer";
+import FlexContainer from "./FlexContainer";
 
 interface SkeletonCustomGroupInterface {
   repeat: number;

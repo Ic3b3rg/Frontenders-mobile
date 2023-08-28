@@ -12,8 +12,8 @@ import {
 import { useGetReadMeByNameQuery } from "../../../services/readME.query";
 import FeText from "../../../components/common/FeText";
 import { deleteDashFromString } from "../../../utils/utils";
-import FlexContainer from "../../../components/common/flexContainer";
-import ScreenContainer from "../../../components/common/screenContainer";
+import ScreenContainer from "../../../components/common/ScreenContainer";
+import FlexContainer from "../../../components/common/FlexContainer";
 
 export default function RepoDetails() {
   const { repoDetails } = useSearchParams<{ repoDetails: string }>();

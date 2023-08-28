@@ -25,7 +25,7 @@ import {
 } from "../services/repos.query";
 import { useGetReadMeByNameQuery } from "../services/readME.query";
 import { LinearGradient } from "expo-linear-gradient";
-import FlexContainer from "./common/flexContainer";
+import FlexContainer from "./common/FlexContainer";
 
 export function RepositoryCard({
   id,

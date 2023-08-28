@@ -35,11 +35,7 @@
         "projectId": "41f92566-0fa6-4a29-bb05-a257f74ff8ef"
       }
     },
-    "plugins": [
-      "@react-native-firebase/app",
-      "@react-native-firebase/perf",
-      "@react-native-firebase/crashlytics"
-    ],
+    "plugins": ["@react-native-firebase/app"],
     "owner": "ic3b3rg94"
   }
 }

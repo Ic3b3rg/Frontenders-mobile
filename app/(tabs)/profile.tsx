@@ -9,8 +9,8 @@ import { ListItem } from "@rneui/themed";
 import { useDispatch, useSelector } from "react-redux";
 import { selectAllFavourite } from "../../store/favourites/favouritesSelector";
 import { handleFavourite } from "../../store/favourites/favouritesSlice";
-import ScreenContainer from "../../components/common/screenContainer";
-import FlexContainer from "../../components/common/flexContainer";
+import ScreenContainer from "../../components/common/ScreenContainer";
+import FlexContainer from "../../components/common/FlexContainer";
 
 export default function TabTwoScreen() {
   const {

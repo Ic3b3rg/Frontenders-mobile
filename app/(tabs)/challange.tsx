@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 import { Text } from "@rneui/themed";
-import ScreenContainer from "../../components/common/screenContainer";
+import ScreenContainer from "../../components/common/ScreenContainer";
 
 export default function ChallangeScreen() {
   return (

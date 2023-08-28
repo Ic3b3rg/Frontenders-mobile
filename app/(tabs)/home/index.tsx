@@ -5,7 +5,7 @@ import { RepositoryCard } from "../../../components/repositoryCard";
 
 import SkeletonCustomGroup from "../../../components/common/Skeleton";
 import { useGetAllReposQuery } from "../../../services/repos.query";
-import ScreenContainer from "../../../components/common/screenContainer";
+import ScreenContainer from "../../../components/common/ScreenContainer";
 
 export default function Home() {
   const { data: repositories, error, isLoading } = useGetAllReposQuery();
