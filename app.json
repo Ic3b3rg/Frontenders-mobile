@@ -37,8 +37,7 @@
     },
     "plugins": [
       "@react-native-firebase/app",
-      "@react-native-firebase/perf",
-      "@react-native-firebase/crashlytics"
+      "@react-native-firebase/messaging"
     ],
     "owner": "ic3b3rg94"
   }
