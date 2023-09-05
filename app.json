@@ -24,7 +24,8 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#def249"
       },
-      "package": "com.ic3b3rg94.frontenders"
+      "package": "com.ic3b3rg94.frontenders",
+      "versionCode": "1.0.1.1"
     },
     "web": {
       "bundler": "metro",
