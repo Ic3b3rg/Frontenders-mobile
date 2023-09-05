@@ -25,7 +25,7 @@
         "backgroundColor": "#def249"
       },
       "package": "com.ic3b3rg94.frontenders",
-      "versionCode": "1.0.1.1"
+      "versionCode": 1.1
     },
     "web": {
       "bundler": "metro",
