@@ -9,7 +9,8 @@
     "prebuild": "expo prebuild",
     "test": "jest --watchAll",
     "build:android": "eas build -p android",
-    "build:ios": "eas build -p ios"
+    "build:ios": "eas build -p ios",
+    "sumbit:android": "eas submit --platform android"
   },
   "jest": {
     "preset": "jest-expo"
@@ -36,6 +37,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.71.8",
+    "react-native-gesture-handler": "^2.12.1",
     "react-native-safe-area-context": "4.5.0",
     "react-native-screens": "~3.20.0",
     "react-native-video": "^5.2.1",
